@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>EmberMN 9/11</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/ember.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+aside.left-decoration {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: top;
+}
+
+aside.left-decoration + ul {
+	margin-top: 10px;
+}
+
+aside.left-decoration + ul > li {
+	margin-bottom: 10px;
+}
+
+#about-me table {
+	width: 100%;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+#about-me table tr td:first-child {
+	text-align: right;
+}
+
+.raw-img {
+	border: 0 !important;
+	background: none !important;
+	box-shadow: none !important;
+	opacity: 1 !important;
+}
+
+#embermn-logo {
+	position: absolute;
+	width: 200px;
+	bottom: 0px;
+	left: -100px;
+}
+
+.social-names li {
+    display: inline-block;
+    margin-right: 24px;
+    list-style-type: none;
+}
+
+.social-names li img {
+    max-width: 64px;
+    max-height: 64px;
+	border: 0 !important;
+	background: none !important;
+	box-shadow: none !important;
+	opacity: 1;
+    vertical-align: middle;
+}
+
+		</style>
+		
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>EmberMN Fall Kick-Off</h2>
+					<br>
+					<h3>Agenda</h3>
+					<ul style="list-style-type: none;">
+                        <li>6:30 - Room opens</li>
+						<li>7:30 - Announcements & Lightning Talks</li>
+						<li>7:45 - Main Presentation</li>
+						<li>8:15 - Questions / general discussion / clean-up</li>
+						<li>8:30 - End of room reservation</li>
+					</ul>
+					<div id="embermn-logo">
+						<img class="raw-img" src="images/ember-mn-logo.jpg">
+					</div>
+				</section>
+
+				<section>
+					<section>
+						<h2>Announcements</h2>
+					</section>
+					<section>
+						<h2>Future Meetings</h2>
+						<ul>
+							<li>2nd Thursday of the month (but probably not every month)</li>
+							<li>Sponsorship (food!) from <a href="http://www.teksystems.com"><img class="raw-img" alt="TEK Systems"
+                            src="images/TEKsystems-logo.png" width="400px" style="vertical-align: middle;"></a></li>
+							<li>Locations? TEK suggested "Poor Richards" (Bloomington) but is willing to meet us wherever</li>
+						</ul>
+					</section>
+				</section>
+                
+				<section>
+					<section>
+						<h2>Lightning Talks?</h2>
+                        <br>
+						<p><small>(Dream on, Jay, it's the first meetup, and you're hardly even ready.)</small></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>System Health Check App</h3>
+						<h5>a.k.a. Jay's first real attempt at using Ember</h5>
+						<br>
+						<p>Jacob Quant &nbsp; &lt;<a href="mailto:jacobq@gmail.com">jacobq@gmail.com</a>&gt;</p>
+					</section>
+					<section id="about-me">
+						<h3>A little about me</h3>
+						<aside class="left-decoration">
+							<img src="images/about-me/jacobq-gravatar.jpg">
+						</aside>
+						<ul>
+							<li>Computer geek since childhood<br>(QBASIC was gateway)</li>
+							<li>Electrical engineer by training<br>(wrote lots of firmware)</li>
+							<li>Switched to web in 2011<br>(n00b--I know, I know)</li>
+						</ul>
+						<ul class="social-names">
+                            <li><img src="images/about-me/stackexchange.png">iX3</li>
+                            <li><img src="images/about-me/github.png">jacobq</li>
+                            <li><img src="images/about-me/twitter-white.png">jacobq_</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Profile Questions</h2>
+						<ul>
+							<li><em>What do you hope to get from this meetup?</em> <blockquote>Learn some EmberJS and meet local colleagues interested in rich JavaScript applications.</blockquote></li>
+							<li><em>Are you currently using Ember for any projects?</em> <blockquote>No, but I would like to in the future.</blockquote></li>
+							<li><em>Are you willing to present on a topic?</em> <blockquote>Only if it's something about which I have solid experience (i.e. not Ember)</blockquote></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Motivation</h2>
+						<ul>
+							<li>Quick way to check that systems are working properly</li>
+							<li>Easy-to-use tool to aid incident handlers in routing</li>
+							<li>Maintainable by web development team</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Design choices</h2>
+						<ul>
+							<li>Separate UI from actual task running</li>
+							<li>Package with <code>node-webkit</code></li>
+							<li>Originally built w/o any MV* framework<br>(started rebuilding with Ember for this talk)</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Excuses, excuses, ...</h2>
+						<ul>
+                            <li>"Didn't have time" to learn an MV* framework...</li>
+                            <li>"Didn't have time" for UX design...</li>
+                            <li>"Didn't have time" for testing...</li>
+                        </ul>
+					</section>
+					<section>
+						<h2>It looked like this...</h2>
+                        <img class="raw-img" src="images/health-check-app/original-screenshot-results.png">
+					</section>
+					<section>
+						<h2>...not so bad, right?</h2>
+                        <img class="raw-img" src="images/health-check-app/reasonable-mvcless-code.png">
+					</section>
+					<section>
+						<h4>Ick! Did I write that?</h4>
+                        <img class="raw-img" src="images/health-check-app/ugly-code.png">
+					</section>
+                </section>
+				<section>
+					<section>
+						<h2>Starting over with Ember</h2>
+                        <ul>
+                            <li>I had hoped to have it "finished" for tonight--sorry</li>
+                            <li>Feel free to peek|help|laugh<br> <a href="https://github.com/jacobq/health-check-using-ember">github.com/jacobq/health-check-using-ember</a></li>
+                        </ul>
+					</section>
+					<section>
+						<h2>So far it looks like this...</h2>
+                        <img class="raw-img" src="images/health-check-app/remake-broken-screenshot.png">
+					</section>
+					<section>
+						<h2>...OK, any maybe like this...</h2>
+                        <img class="raw-img" src="images/health-check-app/remake-broken-screenshot-2.png">
+					</section>
+					<section>
+						<h2>...but the code actually has some structure to it now</h2>
+                        <img class="raw-img" src="images/health-check-app/remake-code.png">
+					</section>
+                </section>                
+				<section>
+					<section>
+						<h2>What is node-webkit?</h2>
+					</section>
+					<section data-markdown class="stretch">
+						<script type="text/template">
+## Introduction
+
+node-webkit is an app runtime based on `Chromium` and `node.js`. You can 
+write native apps in HTML and JavaScript with node-webkit. It also lets you
+call Node.js modules directly from the DOM and enables a new way of writing
+native applications with all Web technologies.
+
+It's created and developed in the Intel Open Source Technology Center.
+
+[Introduction to node-webkit (slides)](https://speakerdeck.com/u/zcbenz/p/node-webkit-app-runtime-based-on-chromium-and-node-dot-js)   
+[Creating Desktop Applications With node-webkit](http://strongloop.com/strongblog/creating-desktop-applications-with-node-webkit/)     
+[WebApp to DesktopApp with node-webkit (slides)](http://oldgeeksguide.github.io/presentations/html5devconf2013/wtod.html)  
+[Essay on the history and internals of the project](http://yedingding.com/2014/08/01/node-webkit-intro-en.html)					
+
+<br>
+<small>(shamelessly stolen from the project home page: <a href="https://github.com/rogerwang/node-webkit">github.com/rogerwang/node-webkit</a>)</small>
+</script>
+					</section>
+				</section>
+
+				<section>
+					<section>
+                        <h2>BTW</h2>
+                        <img src="images/duplicate.png">
+						<p>There's another (much better) talk on this subject from the SF Ember Meetup: <a href="http://blog.nitrous.io/2014/04/30/building-desktop-apps-with-ember-and-node-webkit.html">Building Desktop Apps with Ember and Node-Webkit</a></p>
+                        <img width="200px" src="images/building-desktop-apps-talk.jpg">
+					</section>
+				</section>
+				<section>
+					<section></section>
+<!--
+					<section>
+                        <h2>Potential discussion topics</h2>
+                        <ul>
+                            <li></li>
+                        </ul>
+					</section>
+-->
+				</section>
+<!--
+				<section>
+					<section>
+						<h2>Extra stuff</h2>
+					</section>
+					<section>
+						<h2>Miscellaneous Chrome Tips</h2>
+						<ul>
+							<li><a href="https://github.com/emberjs/ember-inspector">Ember Inspector</a> (Chrome extension)</li>
+							<li>Conditional breakpoint to trigger <code>console.log</code></li>
+                            <li><code>$0</code> refers to the selected element in the "elements" panel</li>
+						</ul>
+					</section>
+				</section>
+-->
+                <section>
+					<section>
+						<h2>Thanks for putting up with me</h2>
+						<p>and special thanks to Debbie Gillespie and the University of Minnesota for hosting us tonight. I know it wasn't much of a MeetUp, but it's a starting point, and I'm optimistic about the future.</p>
+                        <br>
+                        <img class="raw-img" width="200px" src="images/umn-logo.gif">
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
